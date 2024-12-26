@@ -1,0 +1,5 @@
+{"student_id": 51, "fname": "Liam", "lname": "Johnson", "dob": "2003-06-15", "gender": "M", "phoneno": "555-111-2222", "city": "Boston"}
+{"student_id": 52, "fname": "Olivia", "lname": "Williams", "dob": "2002-09-22", "gender": "F", "phoneno": "555-333-4444", "city": "Miami"}
+{"student_id": 53, "fname": "Noah", "lname": "Brown", "dob": "2004-03-10", "gender": "M", "phoneno": "555-555-6666", "city": "Seattle"}
+{"student_id": 54, "fname": "Emma", "lname": "Jones", "dob": "2001-12-05", "gender": "F", "phoneno": "555-777-8888", "city": "Atlanta"}
+{"student_id": 55, "fname": "Elijah", "lname": "Garcia", "dob": "2005-02-28", "gender": "M", "phoneno": "555-999-0000", "city": "Denver"}

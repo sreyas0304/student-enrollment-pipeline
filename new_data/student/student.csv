@@ -1,0 +1,51 @@
+student_id,fname,lname,dob,gender,phoneno,city
+1,John,Doe,5/15/1998,M,555-123-4567,New York
+2,Jane,Smith,8/22/1999,F,555-987-6543,Los Angeles
+3,Michael,Johnson,3/10/1997,M,555-234-5678,Chicago
+4,Emily,Brown,11/30/2000,F,555-876-5432,Houston
+5,David,Wilson,7/18/1996,M,555-345-6789,Phoenix
+6,Sarah,Taylor,9/25/1998,F,555-765-4321,Philadelphia
+7,Christopher,Anderson,1/5/1999,M,555-456-7890,San Antonio
+8,Jessica,Thomas,12/12/1997,F,555-654-3210,San Diego
+9,Matthew,Jackson,4/20/2000,M,555-567-8901,Dallas
+10,Olivia,White,10/8/1996,F,555-543-2109,San Jose
+11,Daniel,Harris,2/28/1998,M,555-678-9012,Austin
+12,Sophia,Martin,6/15/1999,F,555-432-1098,Jacksonville
+13,Andrew,Thompson,9/3/1997,M,555-789-0123,San Francisco
+14,Emma,Garcia,1/25/2000,F,555-321-0987,Columbus
+15,James,Martinez,12/7/1996,M,555-890-1234,Indianapolis
+16,Ava,Robinson,4/18/1998,F,555-210-9876,Fort Worth
+17,William,Clark,11/9/1999,M,555-901-2345,Charlotte
+18,Mia,Rodriguez,7/22/1997,F,555-109-8765,Seattle
+19,Joseph,Lewis,3/14/2000,M,555-012-3456,Denver
+20,Isabella,Lee,8/31/1996,F,555-098-7654,Washington D.C.
+21,Isabella,Martinez,11/5/2003,F,555-234-5678,Houston
+22,Ethan,Thompson,7/18/2002,M,555-987-6543,Phoenix
+23,Sophia,Lee,3/22/2004,F,555-876-5432,Chicago
+24,Oliver,Clark,9/30/2001,M,555-345-6789,San Diego
+25,Ava,Walker,1/14/2005,F,555-654-3210,Dallas
+26,William,Hall,6/27/2003,M,555-789-0123,San Antonio
+27,Mia,Allen,12/9/2002,F,555-210-9876,Philadelphia
+28,James,Young,8/3/2004,M,555-543-2109,New York
+29,Charlotte,King,4/16/2001,F,555-678-9012,Los Angeles
+30,Benjamin,Wright,10/21/2005,M,555-321-0987,San Jose
+31,Amelia,Scott,2/8/2003,F,555-890-1234,Phoenix
+32,Lucas,Green,5/25/2002,M,555-432-1098,Chicago
+33,Harper,Baker,11/11/2004,F,555-765-4321,Houston
+34,Henry,Adams,7/19/2001,M,555-098-7654,Dallas
+35,Evelyn,Nelson,3/2/2005,F,555-567-8901,San Diego
+36,Alexander,Carter,9/14/2003,M,555-210-9876,New York
+37,Abigail,Mitchell,1/28/2002,F,555-678-9012,Los Angeles
+38,Daniel,Perez,6/7/2004,M,555-345-6789,Chicago
+39,Emily,Roberts,12/23/2001,F,555-987-6543,Philadelphia
+40,Joseph,Turner,8/9/2005,M,555-234-5678,San Antonio
+41,Madison,Phillips,4/1/2003,F,555-876-5432,Phoenix
+42,Samuel,Campbell,10/17/2002,M,555-543-2109,Houston
+43,Scarlett,Parker,2/14/2004,F,555-789-0123,Dallas
+44,Christopher,Evans,5/6/2001,M,555-321-0987,San Diego
+45,Victoria,Edwards,7/29/2005,F,555-654-3210,New York
+46,Andrew,Collins,12/12/2003,M,555-098-7654,Chicago
+47,Grace,Stewart,3/20/2002,F,555-567-8901,Los Angeles
+48,Jack,Sanchez,9/8/2004,M,555-432-1098,Philadelphia
+49,Chloe,Morris,11/26/2001,F,555-890-1234,San Antonio
+50,Ryan,Rogers,5/13/2005,M,555-765-4321,Phoenix

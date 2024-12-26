@@ -1,0 +1,26 @@
+instructor_id,fname,lname,department,specialization,rating
+201,Robert,Brown,Computer Science,Machine Learning,4.8
+202,Jennifer,Green,Business,Marketing Strategy,4.7
+203,Michael,Wilson,Physics,Quantum Mechanics,4.6
+204,Sarah,Anderson,Mathematics,Algebraic Topology,4.9
+205,David,Taylor,Biology,Molecular Genetics,4.5
+206,Elizabeth,Martinez,Chemistry,Organic Chemistry,4.7
+207,James,Thompson,Psychology,Cognitive Neuroscience,4.6
+208,Maria,Rodriguez,Economics,Behavioral Economics,4.8
+209,William,Lee,Engineering,Artificial Intelligence,4.9
+210,Emily,Johnson,History,Modern European History,4.5
+211,Christopher,Davis,English,Contemporary Literature,4.6
+212,Jessica,Garcia,Political Science,International Relations,4.7
+213,Daniel,Miller,Sociology,Urban Sociology,4.5
+214,Sophia,Martinez,Anthropology,Cultural Anthropology,4.8
+215,John,Williams,Philosophy,Ethics and Metaphysics,4.6
+216,Olivia,Jones,Art History,Renaissance Art,4.7
+217,Alexander,Smith,Computer Engineering,Cybersecurity,4.9
+218,Emma,Brown,Environmental Science,Climate Change,4.6
+219,Ryan,Taylor,Linguistics,Computational Linguistics,4.7
+220,Isabella,Garcia,Neuroscience,Brain Plasticity,4.8
+221,Robert,Brown,Computer Science,Machine Learning,4.8
+222,Jennifer,Green,Business,Marketing Strategy,4.5
+223,Michael,Wilson,Physics,Quantum Mechanics,4.7
+224,Sarah,Anderson,Mathematics,Algebraic Topology,4.9
+225,David,Taylor,Biology,Bioinformatics,4.6

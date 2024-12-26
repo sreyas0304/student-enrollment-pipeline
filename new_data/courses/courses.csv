@@ -1,0 +1,26 @@
+course_id,course_credits,start_date,end_date,course_major
+101,3,1/15/2024,5/10/2024,Computer Science
+102,4,1/20/2024,5/15/2024,Business Administration
+103,3,2/1/2024,6/1/2024,Mathematics
+104,4,1/10/2024,5/5/2024,Biology
+105,3,2/5/2024,6/10/2024,English Literature
+106,4,1/25/2024,5/20/2024,Physics
+107,3,2/10/2024,6/15/2024,Chemistry
+108,3,1/18/2024,5/12/2024,Psychology
+109,4,2/3/2024,6/5/2024,Economics
+110,3,1/22/2024,5/18/2024,History
+111,3,2/7/2024,6/12/2024,Fine Arts
+112,4,1/12/2024,5/8/2024,Sociology
+113,3,2/15/2024,6/20/2024,Philosophy
+114,4,1/28/2024,5/25/2024,Political Science
+115,3,2/2/2024,6/7/2024,Music
+116,4,1/17/2024,5/13/2024,Anthropology
+117,3,2/12/2024,6/18/2024,Geology
+118,4,1/30/2024,5/28/2024,Foreign Languages
+119,3,2/8/2024,6/14/2024,Environmental Science
+120,4,1/14/2024,5/9/2024,Marketing
+121,3,3/15/2024,7/30/2024,Computer Science
+122,4,2/1/2024,6/15/2024,Business Administration
+123,3,1/20/2024,5/31/2024,Mathematics
+124,4,4/10/2024,8/25/2024,Biology
+125,3,3/1/2024,7/15/2024,English Literature

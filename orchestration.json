@@ -1,0 +1,134 @@
+{
+  "QueryLanguage": "JSONata",
+  "Comment": "A description of my state machine",
+  "StartAt": "StartCrawler",
+  "States": {
+    "StartCrawler": {
+      "Type": "Task",
+      "Arguments": {
+        "Name": "enrollment_crawler"
+      },
+      "Resource": "arn:aws:states:::aws-sdk:glue:startCrawler",
+      "Next": "GetCrawler"
+    },
+    "GetCrawler": {
+      "Type": "Task",
+      "Arguments": {
+        "Name": "enrollment_crawler"
+      },
+      "Resource": "arn:aws:states:::aws-sdk:glue:getCrawler",
+      "Next": "Choice"
+    },
+    "Choice": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Next": "Wait",
+          "Condition": "{% $states.input.Crawler.State = 'RUNNING' %}"
+        }
+      ],
+      "Default": "Enrich the Enrollment Data Job"
+    },
+    "Wait": {
+      "Type": "Wait",
+      "Seconds": 5,
+      "Next": "GetCrawler"
+    },
+    "Enrich the Enrollment Data Job": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Arguments": {
+        "JobName": "enrich_enrollment_data_job"
+      },
+      "Next": "Ingest Data into Student PII Job"
+    },
+    "Ingest Data into Student PII Job": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Arguments": {
+        "JobName": "ingest_student_pii_data"
+      },
+      "Next": "Run transformed data crawler"
+    },
+    "Run transformed data crawler": {
+      "Type": "Task",
+      "Arguments": {
+        "Name": "transformed_data_crawler"
+      },
+      "Resource": "arn:aws:states:::aws-sdk:glue:startCrawler",
+      "Next": "Transformed Data Crawler State"
+    },
+    "Transformed Data Crawler State": {
+      "Type": "Task",
+      "Arguments": {
+        "Name": "transformed_data_crawler"
+      },
+      "Resource": "arn:aws:states:::aws-sdk:glue:getCrawler",
+      "Next": "Is Crawler Run Complete"
+    },
+    "Is Crawler Run Complete": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Next": "Wait for Crawler to Finish Run",
+          "Condition": "{% $states.input.Crawler.State = 'RUNNING' %}"
+        }
+      ],
+      "Default": "Ingest Transformed Data into Redshift"
+    },
+    "Wait for Crawler to Finish Run": {
+      "Type": "Wait",
+      "Seconds": 5,
+      "Next": "Transformed Data Crawler State"
+    },
+    "Ingest Transformed Data into Redshift": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Arguments": {
+        "JobName": "ingest-to-redshift"
+      },
+      "Next": "GetJobRun"
+    },
+    "GetJobRun": {
+      "Type": "Task",
+      "Arguments": {
+        "JobName": "ingest-to-redshift",
+        "RunId": "jr_149680fbc3bc1d502b58f4b8976dc829662a3ce261dd762b77f2477b0a7463be"
+      },
+      "Resource": "arn:aws:states:::aws-sdk:glue:getJobRun",
+      "Next": "Job Run Status"
+    },
+    "Job Run Status": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Condition": "{% $states.input.JobRun.JobRunState = 'FAILED' %}",
+          "Next": "Fail Notification"
+        }
+      ],
+      "Default": "Success Notification"
+    },
+    "Fail Notification": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Arguments": {
+        "Message": "{% $states.input %}",
+        "TopicArn": "arn:aws:sns:us-east-1:481665108850:student_enrollment_notification"
+      },
+      "End": true
+    },
+    "Success Notification": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Arguments": {
+        "Message": "Workflow Successfully Completed",
+        "TopicArn": "arn:aws:sns:us-east-1:481665108850:student_enrollment_notification"
+      },
+      "End": true
+    }
+  }
+}
+
+
+
+
