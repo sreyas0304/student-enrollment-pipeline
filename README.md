@@ -48,4 +48,27 @@ Role-based access control
 Read-only and read-write privileges
 Secure data warehouse access
 
+# Workflow Orchestration
+The ETL pipeline is orchestrated using AWS Step Functions, which:
+Triggers Glue crawlers for metadata extraction
+Executes data enrichment jobs
+Processes PII data
+Runs transformed data crawlers
+Loads data into Redshift
+Sends completion notifications via SNS
+
+# Monitoring and Maintenance
+Monitor job execution through AWS Glue console
+Track data quality metrics in S3
+Review Step Functions execution history
+Check SNS notifications for job status
+Monitor Redshift query performance
+
+# Security Considerations
+Implement encryption at rest for S3 and Redshift
+Use IAM roles with least privilege principle
+Secure sensitive data using Lake Formation
+Regular audit of access patterns
+Monitoring of security logs
+
 
