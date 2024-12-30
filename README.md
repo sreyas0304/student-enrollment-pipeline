@@ -49,20 +49,10 @@ Read-only and read-write privileges
 Secure data warehouse access
 
 # Workflow Orchestration
-The ETL pipeline is orchestrated using AWS Step Functions, which:
-Triggers Glue crawlers for metadata extraction
-Executes data enrichment jobs
-Processes PII data
-Runs transformed data crawlers
-Loads data into Redshift
-Sends completion notifications via SNS
+The student enrollment ETL pipeline leverages AWS Step Functions for comprehensive orchestration of the data processing workflow. The orchestration begins by triggering Glue crawlers that extract metadata from raw data sources in S3. Once metadata is cataloged, the workflow executes a series of Glue jobs for data enrichment and PII data processing. After the initial transformations, another crawler runs to catalog the transformed data before loading it into Redshift. The workflow concludes by sending automated notifications through SNS to inform stakeholders about the job completion status, ensuring full visibility of the pipeline's execution.
 
 # Monitoring and Maintenance
-Monitor job execution through AWS Glue console
-Track data quality metrics in S3
-Review Step Functions execution history
-Check SNS notifications for job status
-Monitor Redshift query performance
+The pipeline's health and performance are continuously monitored through multiple touchpoints in the AWS ecosystem. The AWS Glue console provides detailed insights into job execution metrics and status, while data quality results stored in S3 offer visibility into data integrity and validation outcomes. Step Functions execution history enables tracking of the entire workflow, including state transitions and execution times. SNS notifications deliver real-time alerts about job completion status, and Redshift query performance metrics help optimize data warehouse operations.
 
 # Security Considerations
 Implement encryption at rest for S3 and Redshift
