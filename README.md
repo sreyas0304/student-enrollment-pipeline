@@ -11,6 +11,10 @@ The pipeline leverages several AWS services to create a scalable and secure data
   - Amazon SNS for notifications
   - AWS Lake Formation for data security
 # Data Flow
+
+![pipeline architecture drawio](https://github.com/user-attachments/assets/c669a036-f6ca-4a35-8bce-fdf979b779ee)
+
+
 # Data Ingestion
 Raw data lands in S3 bucket's raw_layer
 Data includes student information, course details, instructor data, and enrollment records
@@ -43,3 +47,5 @@ PII data protection
 Role-based access control
 Read-only and read-write privileges
 Secure data warehouse access
+
+
